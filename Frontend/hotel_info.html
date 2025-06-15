@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel Info Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .hotel-img {
+      height: 250px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .next-btn {
+      background-color: #add8e6;
+      color: black;
+      font-size: 24px;
+      font-weight: bold;
+      border: none;
+      padding: 10px 30px;
+    }
+    .footer {
+      font-size: 14px;
+    }
+    .nav-link {
+      color: black !important;
+    }
+    .mastercard-logo {
+      width: 60px;
+      margin-top: 10px;
+    }
+    .age-tag {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: white;
+      border-radius: 50%;
+      padding: 5px 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" class="mastercard-logo" alt="Mastercard" />
+      <nav>
+        <a class="nav-link d-inline mx-2" href="#">overview</a>
+        <a class="nav-link d-inline mx-2" href="#">About</a>
+        <a class="nav-link d-inline mx-2" href="#">Rooms</a>
+        <a class="nav-link d-inline mx-2" href="#">Accessibility</a>
+        <a class="nav-link d-inline mx-2" href="#">policies</a>
+      </nav>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-6 position-relative">
+        <img src="assets/lobby.jpeg" class="hotel-img" alt="Hotel Lobby" />
+      </div>
+      <div class="col-md-6 position-relative">
+        <img src="assets/HK_hotel_room.jpeg" class="hotel-img" alt="Room" />
+        <div class="age-tag">16+</div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h5>About this hotel</h5>
+        <p>
+          Located across from a park with a skating rink, this straightforward
+          budget hotel is 13 km from Yarada Beach, 2 km from Dr Y S Rajasekhar
+          Reddy Central park and 8 km from Visakhapatnam Airport....
+        </p>
+        <p><strong>Check-in time:</strong> 12:00</p>
+        <p><strong>Check-out time:</strong> 11:00</p>
+      </div>
+      <div class="col-md-6">
+        <h5>Address & contact information</h5>
+        <p>
+          MIG 2B/ 35, Opposite Children's Park, Vinayaka Nagar Near Gangotri
+          Paradise Apartment, Vuda Colony, Gajuwaka, Visakhapatnam, Andhra
+          Pradesh 530044
+        </p>
+        <a href="location.html"  class="btn btn-outline-primary">Directions</a>
+        <button class="next-btn float-end">Next</button>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="d-flex justify-content-between align-items-center footer">
+      <div>
+        Contact us: ‪+91 7330803159‬<br />
+        Email: influbrand@gmail.com
+      </div>
+      <div>
+        Apps – 
+        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" width="100" alt="Play Store" /></a>
+      </div>
+      <div>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/1384/1384005.png" alt="Insta" /></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/1384/1384017.png" alt="Facebook" /></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/1384/1384014.png" alt="Twitter" /></a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

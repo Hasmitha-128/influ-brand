@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Email Verification</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  position: relative;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.code-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.code-inputs input {
+  width: 40px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.verify-button {
+  background: linear-gradient(to right, #76e370, #5dbb5f);
+  border: none;
+  padding: 14px 30px;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.verify-button:hover {
+  background: linear-gradient(to right, #5dbb5f, #4cae4e);
+}
+
+.resend-text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+.resend-text a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+.resend-text a:hover {
+  text-decoration: underline;
+}
+
+.circle-top, .circle-bottom {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #76e370, #2ecc71);
+  width: 120px;
+  height: 120px;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.circle-top {
+  top: -40px;
+  left: -40px;
+}
+
+.circle-bottom {
+  bottom: -40px;
+  right: -40px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="circle-top"></div>
+    <div class="circle-bottom"></div>
+    <h2>check your email</h2>
+    <p>we sent a reset link to <strong>contact@hkcode.com</strong></p>
+    <p>enter 5 digit code that mentioned in the email</p>
+
+    <div class="code-inputs">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+    </div>
+
+    <a href="set_newpswd.html" class="verify-button">verify-button</a>
+
+    <p class="resend-text">
+      Haven’t got the email yet? <a href="#">Resend email</a>
+    </p>
+  </div>
+</body>
+</html>

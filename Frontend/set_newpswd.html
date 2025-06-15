@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Set New Password</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 450px;
+  padding: 40px;
+  text-align: left;
+  position: relative;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 15px 45px 15px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #ffeb3b, #c8c8c8);
+  outline: none;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 16px;
+  background-color: #888833;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: lowercase;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.top-left {
+  top: -60px;
+  left: -60px;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(to bottom right, #00ff00, #999900);
+}
+
+.bottom-right {
+  bottom: -60px;
+  right: -60px;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(to top left, #ffff00, #cccc00);
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="circle top-left"></div>
+    <div class="circle bottom-right"></div>
+
+    <h1>Set a New Password</h1>
+    <p class="subtitle">Create a new password. Ensure it differs from previous ones for security</p>
+
+    <form>
+      <label for="new-password">Password</label>
+      <div class="input-wrapper">
+        <input type="password" id="new-password" placeholder="Enter your new Password">
+        <span class="eye-icon">👁‍🗨</span>
+      </div>
+
+      <label for="confirm-password">Confirm Password</label>
+      <div class="input-wrapper">
+        <input type="password" id="confirm-password" placeholder="Re-enter Password">
+        <span class="eye-icon">👁‍🗨</span>
+      </div>
+
+      <a href="pswd_reset.html" type="submit" class="submit-btn">update password</a>
+    </form>
+  </div>
+</body>
+</html>
