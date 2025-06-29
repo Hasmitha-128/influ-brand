@@ -9,18 +9,27 @@ import {
   sendResetOtp,
   resetPassword,
 } from "../controllers/authController.js";
-import userAuth from "../middleware/userAuth.js";
 
-const authRouter = express.Router();
+const router = express.Router();
 
-// Public routes
-authRouter.post("/register", register);
-authRouter.post("/login", login);
-authRouter.post("/logout", logout);
-authRouter.post("/send-verify-otp", sendVerifyOtp);
-authRouter.post("/verify-account", verifyEmail);
-authRouter.post("/is-auth", userAuth, isAuthenticated);
-authRouter.post("/send-reset-otp", sendResetOtp);
-authRouter.post("/reset-password", resetPassword);
+// ✅ Registration
+router.post("/register", register);
 
-export default authRouter;
+// ✅ Login
+router.post("/login", login);
+
+// ✅ Logout
+router.post("/logout", logout);
+
+// ✅ Check if user is authenticated
+router.get("/is-authenticated", isAuthenticated);
+
+// ✅ Email verification
+router.post("/send-verify-otp", sendVerifyOtp);
+router.post("/verify-email", verifyEmail);
+
+// ✅ Password reset
+router.post("/send-reset-otp", sendResetOtp);
+router.post("/reset-password", resetPassword);
+
+export default router;

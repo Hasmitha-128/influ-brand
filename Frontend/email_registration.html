@@ -1,130 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Email Verification</title>
   <style>
     body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #00F7FF, #45A8AC, #737373);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-.container {
-  text-align: center;
-  padding: 40px;
-  max-width: 400px;
-  width: 100%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  position: relative;
-}
+    .container {
+      text-align: center;
+      padding: 40px;
+      max-width: 400px;
+      width: 100%;
+      background-color: #ffffff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      border-radius: 12px;
+      position: relative;
+    }
 
-h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
 
-p {
-  margin: 8px 0;
-  color: #555;
-}
+    p {
+      margin: 8px 0;
+      color: #555;
+    }
 
-.code-inputs {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
-}
+    .code-inputs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
 
-.code-inputs input {
-  width: 40px;
-  height: 50px;
-  font-size: 24px;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
+    .code-inputs input {
+      width: 40px;
+      height: 50px;
+      font-size: 24px;
+      text-align: center;
+      border: 1px solid #aaa;
+      border-radius: 8px;
+    }
 
-.verify-button {
-  background: linear-gradient(to right, #76e370, #5dbb5f);
-  border: none;
-  padding: 14px 30px;
-  color: white;
-  font-size: 16px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
+    .verify-button {
+      background: linear-gradient(to right, #00F7FF, #45A8AC, #737373);
+      border: none;
+      padding: 14px 30px;
+      color: white;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
 
-.verify-button:hover {
-  background: linear-gradient(to right, #5dbb5f, #4cae4e);
-}
+    .verify-button:hover {
+      opacity: 0.85;
+    }
 
-.resend-text {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #777;
-}
+    .resend-text {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+    }
 
-.resend-text a {
-  color: #00aaff;
-  text-decoration: none;
-}
+    .resend-text a {
+      color: #00F7FF;
+      text-decoration: none;
+      cursor: pointer;
+    }
 
-.resend-text a:hover {
-  text-decoration: underline;
-}
+    .resend-text a:hover {
+      text-decoration: underline;
+    }
 
-.circle-top, .circle-bottom {
-  position: absolute;
-  border-radius: 50%;
-  background: linear-gradient(to bottom right, #76e370, #2ecc71);
-  width: 120px;
-  height: 120px;
-  opacity: 0.2;
-  z-index: -1;
-}
+    .circle-top, .circle-bottom {
+      position: absolute;
+      border-radius: 50%;
+      background: linear-gradient(to right, #00F7FF, #45A8AC, #737373);
+      width: 120px;
+      height: 120px;
+      opacity: 0.15;
+      z-index: -1;
+    }
 
-.circle-top {
-  top: -40px;
-  left: -40px;
-}
+    .circle-top {
+      top: -40px;
+      left: -40px;
+    }
 
-.circle-bottom {
-  bottom: -40px;
-  right: -40px;
-}
-
+    .circle-bottom {
+      bottom: -40px;
+      right: -40px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="circle-top"></div>
     <div class="circle-bottom"></div>
-    <h2>check your email</h2>
-    <p>we sent a reset link to <strong>contact@hkcode.com</strong></p>
-    <p>enter 5 digit code that mentioned in the email</p>
+    <h2>Check your email</h2>
+    <p>We sent a verification code to your email.</p>
+    <p>Enter the 6-digit code below:</p>
 
     <div class="code-inputs">
-      <input type="text" maxlength="1">
-      <input type="text" maxlength="1">
-      <input type="text" maxlength="1">
-      <input type="text" maxlength="1">
-      <input type="text" maxlength="1">
+      <input type="text" maxlength="1" />
+      <input type="text" maxlength="1" />
+      <input type="text" maxlength="1" />
+      <input type="text" maxlength="1" />
+      <input type="text" maxlength="1" />
+      <input type="text" maxlength="1" />
     </div>
 
-    <a href="set_newpswd.html" class="verify-button">verify-button</a>
+    <button id="verifyBtn" class="verify-button">Verify</button>
+    <p id="message" style="margin-top:10px; color:#d9534f;"></p>
 
     <p class="resend-text">
-      Haven’t got the email yet? <a href="#">Resend email</a>
+      Haven’t got the email? <a id="resendLink">Resend email</a>
     </p>
   </div>
+
+  <script src="email_registration.js"></script>
 </body>
 </html>

@@ -14,12 +14,11 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background: #fff;
+      background: #ffffff;
       overflow-x: hidden;
     }
-
     .role-button {
-      background: linear-gradient(to right, #fca311, #556b2f);
+      background: linear-gradient(to right, #00F7FF, #45A8AC);
       border: none;
       color: white;
       padding: 10px 30px;
@@ -27,28 +26,26 @@
       border-radius: 12px;
       margin-bottom: 20px;
     }
-
     .card-box {
-      background: linear-gradient(to bottom right, #e2c400, #5e5c00);
+      background: linear-gradient(to bottom right, #00F7FF, #45A8AC, #737373);
       padding: 30px;
       border-radius: 15px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.2);
       max-width: 400px;
     }
-
     .form-control:focus {
       box-shadow: none;
     }
-
     .sign-in-btn {
-      background-color: #f44336;
+      background-color: #45A8AC;
       color: white;
       border: none;
       padding: 10px;
       width: 100%;
       border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
     }
-
     .google-btn {
       background-color: #f2f2f2;
       border-radius: 6px;
@@ -62,26 +59,24 @@
       font-weight: 500;
       color: #333;
     }
-
     .decor {
       position: absolute;
       top: 0;
       left: 0;
       width: 180px;
       height: 180px;
-      background-color: #fca311;
+      background: linear-gradient(to bottom right, #00F7FF, #45A8AC);
       transform: rotate(45deg);
       z-index: -1;
     }
-
     .footer-text {
       font-size: 13px;
       margin-top: 15px;
     }
-
     .footer-text a {
-      color: orangered;
+      color: #00F7FF;
       text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -92,16 +87,16 @@
 
     <div class="text-center">
       <h2 class="fw-bold">Welcome</h2>
-      <p class="text-muted mb-3">please enter your details</p>
+      <p class="text-muted mb-3">Please enter your details</p>
 
       <button class="role-button mb-4">Influencer</button>
 
       <div class="mx-auto card-box">
-        <form>
+        <form id="loginForm">
           <div class="mb-3 text-start">
             <label class="form-label fw-bold">Email</label>
             <div class="input-group">
-              <input type="email" class="form-control" placeholder="Enter your email" />
+              <input type="email" id="email" class="form-control" placeholder="Enter your email" required />
               <span class="input-group-text">
                 <img src="https://img.icons8.com/ios-filled/20/000000/new-post.png"/>
               </span>
@@ -109,9 +104,9 @@
           </div>
 
           <div class="mb-3 text-start">
-            <label class="form-label fw-bold">password</label>
+            <label class="form-label fw-bold">Password</label>
             <div class="input-group">
-              <input type="password" class="form-control" value="**********" />
+              <input type="password" id="password" class="form-control" placeholder="Enter your password" required />
               <span class="input-group-text">
                 <img src="https://img.icons8.com/ios-glyphs/20/000000/lock--v1.png"/>
               </span>
@@ -121,25 +116,27 @@
           <div class="d-flex justify-content-between align-items-center mb-3">
             <div class="form-check">
               <input type="checkbox" class="form-check-input" id="rememberMe"/>
-              <label class="form-check-label small" for="rememberMe">remember me</label>
+              <label class="form-check-label small" for="rememberMe">Remember me</label>
             </div>
-            <a href="forget_pswd.html" class="small text-dark">Forgot password</a>
+            <a href="forget_pswd.html" class="small text-dark">Forgot password?</a>
           </div>
 
-          <a href="hotels_list.html"  type="submit" class="sign-in-btn mb-3">sign in</a>
+          <button type="submit" class="sign-in-btn mb-3">Sign in</button>
 
           <button type="button" class="google-btn mb-2">
             <img src="https://img.icons8.com/color/20/000000/google-logo.png"/>
-            sign in with google
+            Sign in with Google
           </button>
 
           <div class="footer-text">
-            Don't have an account? <a href="#">sign up for free!</a>
+            Don't have an account? <a href="#">Sign up for free!</a>
           </div>
         </form>
       </div>
     </div>
   </div>
 
+  <!-- Load your separate JS -->
+  <script src="influencer_login.js"></script>
 </body>
 </html>

@@ -16,13 +16,17 @@
       position: relative;
       min-height: 100vh;
       padding-bottom: 80px;
-      background-color: #ffffff; /* Pure white background */
+      background-color: #ffffff;
       color: #222;
+      overflow: hidden;
     }
 
     h5 {
       font-weight: 600;
       font-size: 1.6rem;
+      background: linear-gradient(to right, #00F7FF, #45A8AC, #737373);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     p, li, button, .bottom-trust-score {
@@ -35,11 +39,11 @@
     }
 
     .logo-large {
-      height: 120px;
+      height: 150px;
     }
 
     .text-logo {
-      height: 120px;
+      height: 150px;
     }
 
     .bottom-trust-score {
@@ -52,12 +56,18 @@
       color: #444;
     }
 
-    .btn-info {
+    .btn-gradient {
+      background: linear-gradient(to right, #00F7FF, #45A8AC, #737373);
+      border: none;
+      color: white !important;
       font-weight: 500;
+      padding: 0.5rem 1.5rem;
+      transition: all 0.3s ease;
     }
 
-    .btn-outline-info {
-      font-weight: 500;
+    .btn-gradient:hover {
+      background: linear-gradient(to left, #737373, #45A8AC, #00F7FF);
+      color: #fff;
     }
   </style>
 </head>
@@ -67,23 +77,18 @@
   <!-- Header: Logos + Auth Buttons -->
   <div class="d-flex justify-content-between align-items-start flex-wrap">
     <div class="d-flex align-items-start">
-      <!-- Top Left LB Logo -->
       <img src="assets/Black-logo.jpg" alt="LB Logo" class="me-3 logo-large"/>
-
-      <!-- Text Logo -->
       <img src="assets/influencer-logo.png" alt="InfluBrand Logo" class="text-logo"/>
     </div>
 
-    <!-- Log In / Sign Up -->
     <div class="mt-2 mt-md-0">
-      <button class="btn btn-info text-white me-2 px-4">Log In</button>
-      <button class="btn btn-info text-white px-4">Sign Up</button>
+      <button id="loginBtn" class="btn btn-gradient me-2">Log In</button>
+      <button id="signupBtn" class="btn btn-gradient">Sign Up</button>
     </div>
   </div>
 
   <!-- Main Section -->
   <div class="row mt-5">
-    <!-- Left Content -->
     <div class="col-md-6">
       <h5>Connect with Authentic Influencers</h5>
       <p class="text-muted">
@@ -91,8 +96,8 @@
       </p>
 
       <div class="mb-4">
-        <a href="create_businessacnt.html" class="btn btn-info text-white me-2">I'm Brand</a>
-        <a href="create_influenceracnt.html" class="btn btn-info text-white me-2">I'm an Influencer</a>
+        <a href="create_businessacnt.html" class="btn btn-gradient me-2">I'm Brand</a>
+        <a href="create_influenceracnt.html" class="btn btn-gradient me-2">I'm an Influencer</a>
       </div>
 
       <ul class="list-unstyled">
@@ -111,18 +116,18 @@
       </div>
     </div>
 
-    <!-- Right Image Logo -->
     <div class="col-md-6 text-end mt-4 mt-md-0">
       <img src="assets/Black-logo.jpg" alt="LB Right Logo" style="max-height: 350px;" class="img-fluid"/>
     </div>
   </div>
 
-  <!-- Bottom Left Trust Score -->
   <div class="bottom-trust-score">
     ✔️ 92% Trust score <br />
     📈 500+ Active Campaigns
   </div>
 </div>
 
+<!-- JS -->
+<script src="index.js"></script>
 </body>
 </html>

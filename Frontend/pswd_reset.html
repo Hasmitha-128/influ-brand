@@ -13,7 +13,6 @@
       overflow-x: hidden;
     }
 
-    /* Shapes */
     .shape-top-left {
       position: absolute;
       top: 0;
@@ -21,21 +20,21 @@
       width: 0;
       height: 0;
       border-right: 180px solid transparent;
-      border-bottom: 180px solid #ffdca8;
+      border-bottom: 180px solid #00f7ff;
       z-index: -1;
     }
 
     .circle-outline {
       position: absolute;
       border-radius: 50%;
-      border: 10px solid #ffca72;
+      border: 10px solid #45a8ac;
       width: 160px;
       height: 160px;
       z-index: -1;
     }
 
     .circle-outline.red {
-      border-color: #c82333;
+      border-color: #737373;
     }
 
     .circle1 {
@@ -60,17 +59,32 @@
       text-align: center;
     }
 
-    .btn-orange {
-      background-color: #ffaa00;
+    .btn-theme {
+      background: linear-gradient(90deg, #00f7ff, #45a8ac, #737373);
       color: white;
       border: none;
       padding: 10px 30px;
       border-radius: 20px;
       font-size: 18px;
+      transition: 0.3s ease;
     }
 
-    .btn-orange:hover {
-      background-color: #e69500;
+    .btn-theme:hover {
+      opacity: 0.9;
+    }
+
+    .btn-fetch {
+      background: #e0f7fa;
+      border: 1px solid #00f7ff;
+      color: #333;
+      padding: 6px 16px;
+      border-radius: 6px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .btn-fetch:hover {
+      background: #b2ebf2;
     }
   </style>
 </head>
@@ -88,8 +102,10 @@
     <p class="text-muted">
       your password has been successfully reset. click confirm to set new password
     </p>
-    <a href="index.html" class="btn btn-orange mt-4">confirm</a>
+    <a href="index.html" class="btn btn-theme mt-4">confirm</a>
+    <button id="fetchDataBtn" class="btn btn-fetch">Test Backend Connectivity</button>
   </div>
 
+  <script src="pswd_reset.js"></script>
 </body>
 </html>

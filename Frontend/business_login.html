@@ -19,7 +19,7 @@
     }
 
     .role-button {
-      background: linear-gradient(to right, #fca311, #556b2f);
+      background: linear-gradient(to right, #00F7FF 0%, #45A8AC 30%, #737373 50%);
       border: none;
       color: white;
       padding: 10px 30px;
@@ -29,7 +29,7 @@
     }
 
     .card-box {
-      background: linear-gradient(to bottom right, #e2c400, #5e5c00);
+      background: linear-gradient(to bottom right, #00F7FF 0%, #45A8AC 30%, #737373 50%);
       padding: 30px;
       border-radius: 15px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.2);
@@ -41,7 +41,7 @@
     }
 
     .sign-in-btn {
-      background-color: #f44336;
+      background: linear-gradient(to right, #00F7FF 0%, #45A8AC 30%, #737373 50%);
       color: white;
       border: none;
       padding: 10px;
@@ -67,7 +67,7 @@
       font-size: 32px;
       font-weight: bold;
       cursor: pointer;
-      background: #fca311;
+      background: #00F7FF;
       width: 50px;
       height: 50px;
       display: flex;
@@ -82,7 +82,7 @@
       left: 0;
       width: 180px;
       height: 180px;
-      background-color: #fca311;
+      background: linear-gradient(to right, #00F7FF 0%, #45A8AC 30%, #737373 50%);
       transform: rotate(45deg);
       z-index: -1;
     }
@@ -104,23 +104,23 @@
     <div class="decor"></div>
 
     <div class="position-absolute top-0 start-0 m-4">
-      <div class="back-button">
+      <div class="back-button" onclick="history.back()">
         &larr;
       </div>
     </div>
 
     <div class="text-center">
       <h2 class="fw-bold">Welcome</h2>
-      <p class="text-muted mb-3">please enter your details</p>
+      <p class="text-muted mb-3">Please enter your details</p>
 
       <button class="role-button mb-4">Business</button>
 
       <div class="mx-auto card-box">
-        <form>
+        <form id="loginForm">
           <div class="mb-3 text-start">
             <label class="form-label fw-bold">Email</label>
             <div class="input-group">
-              <input type="email" class="form-control" placeholder="Enter your email" />
+              <input type="email" id="email" class="form-control" placeholder="Enter your email" required/>
               <span class="input-group-text">
                 <img src="https://img.icons8.com/ios-filled/20/000000/new-post.png"/>
               </span>
@@ -128,9 +128,9 @@
           </div>
 
           <div class="mb-3 text-start">
-            <label class="form-label fw-bold">password</label>
+            <label class="form-label fw-bold">Password</label>
             <div class="input-group">
-              <input type="password" class="form-control" value="**********" />
+              <input type="password" id="password" class="form-control" placeholder="Enter your password" required/>
               <span class="input-group-text">
                 <img src="https://img.icons8.com/ios-glyphs/20/000000/lock--v1.png"/>
               </span>
@@ -140,25 +140,28 @@
           <div class="d-flex justify-content-between align-items-center mb-3">
             <div class="form-check">
               <input type="checkbox" class="form-check-input" id="rememberMe"/>
-              <label class="form-check-label small" for="rememberMe">remember me</label>
+              <label class="form-check-label small" for="rememberMe">Remember me</label>
             </div>
-            <a href="forget_pswd.html" class="small text-dark">Forgot password</a>
+            <a href="forget_pswd.html" class="small text-dark">Forgot password?</a>
           </div>
 
-          <a href="influencers_card.html" type="submit" class="sign-in-btn mb-3">sign in</a>
+          <button type="submit" class="sign-in-btn mb-3">Sign In</button>
 
           <button type="button" class="google-btn mb-2">
             <img src="https://img.icons8.com/color/20/000000/google-logo.png"/>
-            sign in with google
+            Sign in with Google
           </button>
 
           <div class="footer-text">
-            Don't have an account? <a href="#">sign up for free!</a>
+            Don't have an account? <a href="#">Sign up for free!</a>
           </div>
         </form>
+        <p id="message" class="mt-2 text-center"></p>
       </div>
     </div>
   </div>
 
+  <!-- Link the JS file -->
+  <script src="business_login.js"></script>
 </body>
 </html>
